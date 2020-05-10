@@ -1,5 +1,3 @@
-import Foundation
-
 public enum CGImageSourceOption {
   ///The best guess of the uniform type identifier (UTI) for the format of the image source file. If specified, the value of this key must be a CFString object. This key can be provided in the options dictionary when you create a CGImageSource object.
   case typeIdentifierHint(CFString)

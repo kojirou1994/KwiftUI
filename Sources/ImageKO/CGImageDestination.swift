@@ -1,4 +1,5 @@
-import Foundation
+@_exported import Foundation
+@_exported import ImageIO
 
 public enum CGImageDestinationError: Error {
   case create

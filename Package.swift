@@ -17,10 +17,14 @@ let package = Package(
     .library(
       name: "KoreGraphics",
       targets: ["KoreGraphics"]),
+    .library(
+      name: "ImageKO",
+      targets: ["ImageKO"]),
   ],
   dependencies: [],
   targets: [
     .target(name: "KoreGraphics"),
+    .target(name: "ImageKO", dependencies: ["KoreGraphics"]),
     .target(name: "KwiftUI"),
     .testTarget(
       name: "KwiftUITests",

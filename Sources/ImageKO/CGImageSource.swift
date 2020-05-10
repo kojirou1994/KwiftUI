@@ -1,6 +1,3 @@
-import ImageIO
-import Foundation
-
 public enum CGImageSourceError: Error {
   case createSource
   case createImage

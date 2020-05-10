@@ -1,5 +1,3 @@
-import ImageIO
-
 extension CGImageSourceStatus: CustomStringConvertible {
   public var description: String {
     switch self {

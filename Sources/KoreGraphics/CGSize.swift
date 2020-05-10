@@ -14,15 +14,19 @@ extension CGSize {
   }
 
   @inlinable
+  public var bestRadius: CGFloat {
+    min(width, height) / 2
+  }
+
+  @inlinable
   public func aspectFitting(in rect: CGSize, upscale: Bool = true) -> CGSize {
     let widthRatio = rect.width / width
     let heightRatio = rect.height / height
 
     let minRatio = min(widthRatio, heightRatio)
 
-    let bestSize = CGSize(width: width * minRatio, height: height * minRatio)
-    if upscale || bestSize.width <= self.width {
-      return bestSize
+    if upscale || minRatio < 1 {
+      return CGSize(width: width * minRatio, height: height * minRatio)
     } else {
       return self
     }
